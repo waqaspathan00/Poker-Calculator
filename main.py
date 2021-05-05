@@ -37,10 +37,9 @@ def click():
     count.save()
 
 """
-Use the following code to manually add and test card combinations
+Use the following function to manually add and test card combinations
 You can then print the boolean value of which card combination you seek
 """
-
 def test():
     cards = []
     cards.append(deck.Card('A', 'red hearts'))
