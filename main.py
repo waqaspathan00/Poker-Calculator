@@ -39,16 +39,19 @@ def click():
 """
 Use the following function to manually add and test card combinations
 You can then print the boolean value of which card combination you seek
+
+It doesnt matter how many hands you enter when you use this function
 """
 def test():
     cards = []
     cards.append(deck.Card('A', 'red hearts'))
-    cards.append(deck.Card('A', 'red hearts'))
+    cards.append(deck.Card('2', 'red hearts'))
     cards.append(deck.Card('3', 'red hearts'))
     cards.append(deck.Card('4', 'red hearts'))
     cards.append(deck.Card('5', 'red hearts'))
 
     output.delete(0.0, END)
+    check.hand_combinations(count, cards)
     count.print_counts(output)
 
 
