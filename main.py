@@ -42,6 +42,7 @@ You can then print the boolean value of which card combination you seek
 
 It doesnt matter how many hands you enter when you use this function
 """
+# test comment ignore
 def test():
     cards = []
     cards.append(deck.Card('A', 'red hearts'))
