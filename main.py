@@ -59,7 +59,7 @@ def test():
 output = Text(window, width=40, height=28, wrap=WORD, background="white")
 output.place(x=10, y=10, anchor=NW)
 
-lbl_enter = Label(window, text="Enter how many poker hands \nyou want to draw: ", bg="darkred", fg="white", justify="left")
+lbl_enter = Label(window, text="Enter how many poker hands\nyou want to draw: ", bg="darkred", fg="white", justify="left")
 lbl_enter['font'] = myfont
 lbl_enter.place(x=350, y=125, anchor=NW)
 
