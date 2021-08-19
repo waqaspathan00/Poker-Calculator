@@ -1,10 +1,11 @@
 import json
 from tkinter import *
 
+
 class Count:
-    '''
+    """
     counts which hands occur during a game of poker
-    '''
+    """
 
     royal_flush = 0
     straight_flush = 0
@@ -17,42 +18,21 @@ class Count:
     one_pair = 0
     total_trials = 0
 
-    """
-    If you want to save the counts each time you run the project then:
-    1. comment out self.reset()
-    2. uncomment self.load() and self.save()
-    
-    If you want to only see the results of the current process then:
-    1. comment out self.load() and self.save()
-    2. uncomment self.reset()
-    """
     def __init__(self):
-        self.reset()
+        """
+        If reset is commented, data between program runs will carry over
+        If reset is uncommented, data will reset each time the program runs
+        """
+        # self.reset()
 
         self.load()
         self.save()
 
-    def get_count(self, hand_ranking):
-        if hand_ranking == 1:
-            return self.royal_flush
-        elif hand_ranking == 2:
-            return self.straight_flush
-        elif hand_ranking == 3:
-            return self.four_of_a_kind
-        elif hand_ranking == 4:
-            return self.full_house
-        elif hand_ranking == 5:
-            return self.flush
-        elif hand_ranking == 6:
-            return self.straight
-        elif hand_ranking == 7:
-            return self.three_of_a_kind
-        elif hand_ranking == 8:
-            return self.two_pair
-        elif hand_ranking == 9:
-            return self.one_pair
-
     def print_counts(self, output):
+        """
+        outputs all data to tkinter window
+        """
+
         output.insert(END, "Hand Counts:")
         output.insert(END, "\n==============================")
         output.insert(END, "\nRoyal Flush:\t\t\t" + str(self.royal_flush))
@@ -68,6 +48,12 @@ class Count:
         output.insert(END, "\nTotal Trials:\t\t" + str(self.total_trials))
 
     def save(self):
+        """
+        saves data to data.json
+
+        called from constructor
+        """
+
         file = open("data.json", "w")
         self.data = {"royal_flush": self.royal_flush,
                      "straight_flush": self.straight_flush,
@@ -83,8 +69,14 @@ class Count:
         file.close()
 
     def load(self):
+        """
+        loads data from data.json
+
+        called from constructor
+        """
         json_data = open("data.json", "r")
         data = json.load(json_data)
+        print(data)
         for key in data.keys():
             if key == "royal_flush":
                 self.royal_flush = data[key]
@@ -110,16 +102,28 @@ class Count:
         json_data.close()
 
     def reset(self):
+        """
+        OPTIONAL METHOD
+        resets data in data.json
+
+        called from constructor
+
+        If commented, data between program runs will carry over
+        If uncommented, data will reset each time the program runs
+        """
+
         file = open("data.json", "w")
-        self.data = {"royal_flush": 0,
-                     "straight_flush": 0,
-                     "four_of_a_kind": 0,
-                     "full_house": 0,
-                     "flush": 0,
-                     "straight": 0,
-                     "three_of_a_kind": 0,
-                     "two_pair": 0,
-                     "one_pair": 0,
-                     "total_trials": 0}
+        self.data = {
+            "royal_flush": 0,
+            "straight_flush": 0,
+            "four_of_a_kind": 0,
+            "full_house": 0,
+            "flush": 0,
+            "straight": 0,
+            "three_of_a_kind": 0,
+            "two_pair": 0,
+            "one_pair": 0,
+            "total_trials": 0
+        }
         json.dump(self.data, file)
         file.close()
