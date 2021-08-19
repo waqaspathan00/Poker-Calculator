@@ -6,7 +6,14 @@ It will then calculate of those hands how many were a one pair, two pair, ..., r
 In the end it prints out the frequency of each of those ha
 
 # Images
+### Program load, empty form
+![](img/blankscreen.png)
 
+### First run of program with 1000 trials
+![](img/firstrun.png)
+
+### Second run with 50000 trials (including previous 1000 hence 51000). Note the runtime
+![](img/secondrun.png)
 
 # Libraries used
 - tkinter, displays program window and UI
