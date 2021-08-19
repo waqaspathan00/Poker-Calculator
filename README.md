@@ -3,7 +3,7 @@ This program asks you to enter how many different poker hands you want to draw f
 
 It will then calculate of those hands how many were a one pair, two pair, ..., royal flush.
 
-In the end it prints out the frequency of each of those ha
+In the end it prints out how many times each card combination happened
 
 # Images
 ### Program load, empty form
