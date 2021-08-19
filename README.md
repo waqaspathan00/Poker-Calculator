@@ -16,11 +16,11 @@ In the end it prints out the frequency of each of those ha
 ![](img/secondrun.png)
 
 # Libraries used
-- tkinter, displays program window and UI
-- random, shuffles deck
-- copy, creates a copy of the deck for reshuffling
-- defaultdict, used for creating dictionaries with default values when calculating hand combinations
-- json, saving and loading data to and from a json file
+- `tkinter`, displays program window and UI
+- `random`, shuffles deck
+- `copy`, creates a copy of the deck for reshuffling
+- `defaultdict`, used for creating dictionaries with default values when calculating hand combinations
+- `json`, saving and loading data to and from a json file
 
 # Files
 - `main.py` - houses core logic
