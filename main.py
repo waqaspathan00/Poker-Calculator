@@ -1,10 +1,10 @@
+import time
 import tkinter.font as font
 from tkinter import *
 
+import deck
 import check
 import count_tk
-import deck
-import time
 
 # window setup
 window = Tk()
